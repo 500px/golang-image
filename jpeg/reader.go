@@ -504,7 +504,3 @@ func DecodeConfig(r io.Reader) (image.Config, error) {
 	}
 	return image.Config{}, FormatError("missing SOF marker")
 }
-
-func init() {
-	image.RegisterFormat("jpeg", "\xff\xd8", Decode, DecodeConfig)
-}
